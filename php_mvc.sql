@@ -87,7 +87,7 @@ CREATE table post
 CREATE TABLE comment (
     ID int PRIMARY KEY AUTO_INCREMENT,
     content varchar(1000) NOT NULL ,
-    datetime date NOT NULL,
+    date_time date NOT NULL,
     user_id int NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user(ID)
 );
@@ -120,7 +120,9 @@ CREATE TABLE posttag (
 CREATE TABLE likes (
     ID int PRIMARY KEY AUTO_INCREMENT,
     post_id INT NOT NULL,
-    FOREIGN KEY (post_id) REFERENCES post(ID)
+    user_id INT NOT NULL,
+    FOREIGN KEY (post_id) REFERENCES post(ID),
+    FOREIGN KEY (user_id) REFERENCES user(ID)
 );
 
 
