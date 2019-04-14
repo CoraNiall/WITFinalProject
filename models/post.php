@@ -21,7 +21,7 @@
       $req = $db->query('SELECT * FROM post');
       // we create a list of Post objects from the database results
       foreach($req->fetchAll() as $post) {
-        $list[] = new Post($post['ID'], $post['title'], $post['content']);
+        $list[] = new Post($post['id'], $post['title'], $post['content']);
       }
       return $list;
     }
@@ -33,10 +33,10 @@
       $id = intval($id);
       $req = $db->prepare('SELECT * FROM post WHERE id = :id');
       //the query was prepared, now replace :id with the actual $id value
-      $req->execute(array('ID' => $id));
+      $req->execute(array('id' => $id));
       $post = $req->fetch();
 if($post){
-      return new Post($post['ID'], $post['title'], $post['content']);
+      return new Post($post['id'], $post['title'], $post['content']);
     }
     else
     {
