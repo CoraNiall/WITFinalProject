@@ -31,7 +31,7 @@ USE php_mvc;
 -- Table structure for table `role`
 --
 
-CREATE Table role
+CREATE TABLE role
 (
     ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     roles varchar(255) NOT NULL
@@ -41,7 +41,7 @@ CREATE Table role
 -- Table structure for table `user`
 --
 
-CREATE table user
+CREATE TABLE user
 (
     ID  INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     role_id INT NOT NULL,
@@ -56,7 +56,7 @@ CREATE table user
 -- Table structure for table `session`
 --
 
-CREATE table session
+CREATE TABLE session
 (
     ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
@@ -69,7 +69,7 @@ CREATE table session
 -- Table structure for table `post`
 --
 
-CREATE table post
+CREATE TABLE post
 (
     ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     content LONGTEXT NOT NULL,

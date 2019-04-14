@@ -109,7 +109,7 @@ public static function uploadFile(string $name) {
 	}
 
 	$tempFile = $_FILES[self::InputKey]['tmp_name'];
-        $path = "C:/xampp/htdocs/MVC_Skeleton/views/images/";
+        $path = "C:/xampp/htdocs/MVC_Skeleton_master/views/images/";
 	$destinationFile = $path . $name . '.jpeg';
 
 	if (!move_uploaded_file($tempFile, $destinationFile)) {
