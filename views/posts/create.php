@@ -10,9 +10,7 @@
         <input class="w3-input" type="text" name="content" required>
         <label>Content</label>
     </p>
-    <p>
        
-          
   <input type="hidden" 
 	   name="MAX_FILE_SIZE" 
          value="10000000"

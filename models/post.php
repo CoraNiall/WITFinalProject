@@ -68,7 +68,7 @@ $content = $filteredContent;
 $req->execute();
 
 //upload post image if it exists - think this will need editing to enable multiple pictures?
-        if (!empty($_FILES[self::InputKey]['title'])) {
+        if (!empty($_FILES[self::InputKey]['name'])) {
 		Post::uploadFile($title);
 	}
 
