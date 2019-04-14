@@ -53,7 +53,7 @@ class PostController {
             $id = $_GET['id'];
             Post::update($id);
                         
-            $post = Post::all();
+            $posts = Post::all();
             require_once('views/posts/readAll.php');
       }
       

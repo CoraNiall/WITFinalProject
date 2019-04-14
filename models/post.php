@@ -64,10 +64,11 @@ public static function update($id) {
     
 $title = $filteredTitle;
 $content = $filteredContent;
+
 $req->execute();
 
 //upload post image if it exists - think this will need editing to enable multiple pictures?
-        if (!empty($_FILES[self::InputKey]['name'])) {
+        if (!empty($_FILES[self::InputKey]['title'])) {
 		Post::uploadFile($title);
 	}
 
