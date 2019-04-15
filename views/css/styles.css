@@ -1,7 +1,8 @@
+
 .navbar{margin-bottom:0;}
-section{width:100%; float:left;}
-.banner-section{background-image:url("https://static.pexels.com/photos/373912/pexels-photo-373912.jpeg"); background-size:cover; height: 380px; left: 0; position: absolute; top: 0; background-position:0;}
-.well {float: right; width: 100%;}
+.section{width:100%; float:left;}
+.banner-section{background-size:cover; height: 380px; left: 0; position: absolute; top: 0; background-position:0;}
+.well {float: right}
 .post-title-block{padding:100px 0;}
 .post-title-block h1 {color: #fff; font-size: 85px; font-weight: bold; text-transform: capitalize;}
 .post-title-block li{font-size:20px; color: #fff;}
@@ -9,6 +10,8 @@ section{width:100%; float:left;}
 .footer-link{float:left; width:100%; background:#222222; text-align:center; padding:30px;}
 .footer-link a{color:#A9FD00; font-size:18px; text-transform:uppercase;}
 .dropdown-toggle:hover .dropdown-menu {display: block;}
+
+
 
 
 

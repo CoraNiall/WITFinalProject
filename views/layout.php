@@ -19,13 +19,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">W.I.T Blog</a>
+          <a class="navbar-brand" href='/MVC_Skeleton_testingGround'>W.I.T Blog</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active"><a href='/MVC_Skeleton_testingGround'>Home</a></li>
+            <li><a href='?controller=post&action=readAll'>All Posts</a></li>
+            <li><a href='?controller=post&action=create'>Create Post</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Authors <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -52,8 +52,14 @@
     </nav>
 
 <section class="banner-section">
+   <div class="w3-content">
+       <img class="mySlides" src="https://www.snipp.com/wp-content/uploads/2018/12/Women-in-tech-blog-banner.png" alt="custom_html_banner1" style="width: 100%; height:15em ">
+</div>
 </section>
-    
+ 
+ <br>
+ <br>
+ <br> 
 
 
 
@@ -79,10 +85,10 @@
                     </ul>
                 </div>
                 <div class="well">
-                    <h2>About Author</h2>
+                    <center> <h2>About Author</h2> </center>
                     <img src="" class="img-rounded" />
                     <p> </p>
-                    <a href="#" class="btn btn-default">Read more</a>
+                    <center>    <a href="#" class="btn btn-default">Read more</a> </center>
                 </div>
                 <div class="list-group">
                     <a class="list-group-item active" href="#"> <h4 class="list-group-item-heading"> Name of Group of posts 1</h4> <p class="list-group-item-text"></p> </a>
@@ -100,20 +106,17 @@
     </div> <!-- /container -->
 </section>
 
-<title>W.I.T Final Project Blog</title>
+<title>Shopping Cart</title>
   </head>
   <body>
-    <header class="w3-container w3-gray">
-      <a href='?controller=pages&action=home'>Home</a>
-      <a href='?controller=post&action=readAll'>Posts</a>
-      <a href='?controller=post&action=create'>Create Post</a>
-    </header>
+
 <div class="w3-container w3-pink">
     <?php require_once('routes.php'); ?>
 </<div>
 <div class="w3-container w3-gray">
     <footer >
-        Copyright &COPY; <?= date('Y'); ?>
+      
+        <center>    Copyright &COPY; <?= date('Y'); ?> </center>
     </footer>
 </div>
   </body>
