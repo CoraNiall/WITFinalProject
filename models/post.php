@@ -101,7 +101,7 @@ Post::uploadFile($title);
     }
 //changed the slashes here from \ to /
     
-const AllowedTypes = ['image/jpeg', 'image/jpg'];
+const AllowedTypes = ['image/jpeg', 'image/jpg', 'image/png'];
 const InputKey = 'myUploader';
 
 //die() function calls replaced with trigger_error() calls
