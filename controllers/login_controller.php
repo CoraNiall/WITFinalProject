@@ -5,36 +5,37 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+        
+class LoginController {
 
-session_start();
+    //this is accessing the login form
+public function login(){
+    //we expect a form of ?controller=login&action=login to show the login page
+    if($_SERVER['REQUEST_METHOD'] == 'GET') {
+        require_once('views/login/login.php');
+    } else {
+        Login::emailExists();
+    }
+}
 
-// set page title
-$page_title = "Login";
- 
-// include login checker
-$require_login=false;
-include_once "login_checker.php";
- 
-// default to false
-$access_denied=false;
+public function getLogout() {
+    if($_SERVER['REQUEST_METHOD'] == 'GET') {
+        Login::logout();
+        require_once('views/pages/home.php');
+    }
+}
 
-if($_POST){
-    // include classes
-include_once "../connection.php";
-include_once "models/user.php";
- 
-// get database connection
-$database = new Database();
-$db = $database->getConnection();
- 
-// initialize objects
-$user = new User($db);
- 
-// check if email and password are in the database
-$user->email=$_POST['email'];
- 
-// check if email exists, also get user details using this emailExists() method
-$email_exists = $user->emailExists();
- 
-// login validation will be here
+public function register() {
+    if($_SERVER['REQUEST_METHOD'] == 'GET') {
+        require_once('views/login/register.php');
+    }
+}
+
+public function editProfile() {
+    if($_SERVER['REQUEST_METHOD'] == 'GET') {
+        if(!isset($_GET['id']))
+        return call('pages', 'error');
+        Login::update();
+    }
+}
 }
