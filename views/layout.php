@@ -39,14 +39,32 @@
             </li>
           </ul>
             
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Login</a></li>
+           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="./"> Topics <span class="sr-only">(current)</span></a></li>
-            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
             <li><a href="#" class="fa fa-facebook"></a></li>
             <li><a href="#" class="fa fa-twitter"></a></li>
             <li><a href="#" class="fa fa-instagram"></a></li>
           </ul>
+            <?php 
+            //check if user was logged in
+            //if so, show "Account" and "Logout" options
+            if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']== true && $_SESSION['role_id']=='reg_user') {
+            ?>
+            <ul class = "login menu">
+                <?php require_once('routes.php'); ?>
+                <li><a href='?controller=login&action=getLogout'>Logout</a></li>
+                <li><a href='?controller=login&action=userProfile'>Account</a></li>
+            </ul>
+            <?php
+            } else{
+                ?>
+            <ul>
+                <li><a href='?controller=login&action=login'>Login</a></li>
+                <li><a href='?controller=login&action=register'>Register</a></li>
+            </ul>
+            <?php
+            }
+            ?>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
